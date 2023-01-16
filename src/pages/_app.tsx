@@ -1,9 +1,12 @@
-import type { AppType } from 'next/dist/shared/lib/utils';
+import type { AppType } from 'next/app';
 
+import Layout from '@/components/layout/Layout';
 import '@/styles/globals.css';
 
-const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
-};
+const MyApp: AppType = ({ Component, pageProps }) => (
+  <Layout>
+    <Component {...pageProps} />
+  </Layout>
+);
 
 export default MyApp;
