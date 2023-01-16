@@ -8,7 +8,8 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "format": "prettier --w './**/*.{js,cjs,ts,tsx}' --config ./prettier.config.cjs"
+    "format": "prettier --w './**/*.{js,cjs,ts,tsx}' --config ./prettier.config.cjs",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "13.1.2",
