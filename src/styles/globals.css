@@ -18,4 +18,7 @@
   h5 { @apply text-sm; }
 
   p { @apply text-base; }
+
+  a:focus,
+  button:focus { @apply outline-double outline-4 outline-offset-2 outline-blue-600; }
 }
