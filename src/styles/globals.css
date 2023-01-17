@@ -20,5 +20,7 @@
   p { @apply text-base; }
 
   a:focus,
-  button:focus { @apply outline-double outline-4 outline-offset-2 outline-blue-600; }
+  button:focus {
+    @apply outline-none ring-2 ring-blue-600 ring-offset-1 ring-offset-transparent transition-all;
+  }
 }
