@@ -1,7 +1,9 @@
 import { Equal } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
+import { cn, getCurrentTime } from '@/lib/utils';
 import ThemeButton from '@/components/button/ThemeButton';
+
+const currentTime = getCurrentTime();
 
 const Header = () => (
   <header
@@ -10,7 +12,7 @@ const Header = () => (
       'sm:flex-row sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72',
     )}
   >
-    <h4>up2dul</h4>
+    <h4>{currentTime} (UTC +07:00)</h4>
 
     <div className='flex w-full items-center justify-evenly gap-14 text-3xl sm:w-auto'>
       <ThemeButton />
