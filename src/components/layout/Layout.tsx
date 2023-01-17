@@ -1,16 +1,27 @@
 import { Plus_Jakarta_Sans } from '@next/font/google';
 import type { PropsWithChildren as LayoutProps } from 'react';
 
-import { cn } from '@/lib/utils';
 import Header from './Header';
+import SkipToContent from '@/components/button/SkipToContent';
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 const Layout = ({ children }: LayoutProps) => (
-  <main className={cn(jakarta.className, 'pt-[97px] sm:pt-[62px]')}>
+  <>
+    <style jsx global>{`
+      html {
+        font-family: ${jakarta.style.fontFamily};
+      }
+    `}</style>
+
+    <SkipToContent />
+
     <Header />
-    {children}
-  </main>
+
+    <main id='main-content' className='mt-[100px] py-14 sm:mt-[64px]'>
+      {children}
+    </main>
+  </>
 );
 
 export default Layout;
