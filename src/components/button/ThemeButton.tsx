@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
+import MyTooltip from '@/components/MyTooltip';
 
 const ThemeButton = () => {
   const [mounted, setMounted] = useState<boolean>(false);
@@ -19,15 +20,19 @@ const ThemeButton = () => {
   };
 
   return (
-    <button
-      className={cn(
-        'rounded-md py-2 px-3 transition-colors',
-        'hover:bg-bunker-100 dark:hover:bg-geyser-900',
-      )}
-      onClick={handleToggleTheme}
+    <MyTooltip
+      content={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
     >
-      {theme === 'light' ? <Moon /> : <Sun />}
-    </button>
+      <button
+        className={cn(
+          'rounded-md py-2 px-3 transition-colors',
+          'hover:bg-bunker-100 dark:hover:bg-geyser-900',
+        )}
+        onClick={handleToggleTheme}
+      >
+        {theme === 'light' ? <Moon /> : <Sun />}
+      </button>
+    </MyTooltip>
   );
 };
 
