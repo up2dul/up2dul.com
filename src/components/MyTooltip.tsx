@@ -6,7 +6,7 @@ type MyTooltipProps = PropsWithChildren<{
 }>;
 
 const MyTooltip = ({ content, children }: MyTooltipProps) => (
-  <Tooltip.Provider>
+  <Tooltip.Provider delayDuration={400}>
     <Tooltip.Root>
       <Tooltip.Trigger asChild>
         <div>{children}</div>
