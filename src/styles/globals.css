@@ -6,6 +6,10 @@
   @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
 }
 
+.text-link {
+  @apply text-blue-800 decoration-2 underline-offset-2 hover:underline dark:text-blue-600;
+}
+
 @layer base {
   *::selection { @apply bg-blue-500 text-bunker-800; }
 
@@ -21,10 +25,12 @@
   h4 { @apply text-lg; }
   h5 { @apply text-sm; }
 
-  p { @apply text-base; }
+  p { @apply text-base text-bunker-800 dark:text-geyser-200; }
 
   a:focus,
   button:focus {
     @apply rounded-md outline-none ring-2 ring-blue-600 ring-offset-1 ring-offset-transparent transition-all;
   }
+
+  footer p { @apply text-sm font-medium; }
 }
