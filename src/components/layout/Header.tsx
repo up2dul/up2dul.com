@@ -7,8 +7,9 @@ const currentTime = getCurrentTime();
 const Header = () => (
   <header
     className={cn(
-      'fixed top-0 z-10 flex w-full flex-col items-center justify-between gap-4 px-8 py-3 backdrop-blur-md',
-      'sm:flex-row sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72',
+      'main-container fixed top-0 z-10 w-full py-3 backdrop-blur-md',
+      'flex flex-col items-center justify-between gap-4',
+      'sm:flex-row',
     )}
   >
     <h4 className='font-medium'>{currentTime} (UTC +07:00)</h4>
