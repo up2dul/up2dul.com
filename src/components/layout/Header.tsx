@@ -1,7 +1,6 @@
-import { Equal } from 'lucide-react';
-
 import { cn, getCurrentTime } from '@/lib/utils';
 import ThemeButton from '@/components/button/ThemeButton';
+import NavMenu from '@/components/nav/NavMenu';
 
 const currentTime = getCurrentTime();
 
@@ -12,18 +11,11 @@ const Header = () => (
       'sm:flex-row sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72',
     )}
   >
-    <h4>{currentTime} (UTC +07:00)</h4>
+    <h4 className='font-semibold'>{currentTime} (UTC +07:00)</h4>
 
-    <div className='flex w-full items-center justify-evenly gap-14 text-3xl sm:w-auto'>
+    <div className='flex w-full items-center justify-evenly gap-10 text-3xl sm:w-auto'>
       <ThemeButton />
-      <button
-        className={cn(
-          'rounded-md transition-colors',
-          'hover:bg-bunker-100 dark:hover:bg-geyser-900',
-        )}
-      >
-        <Equal size={32} />
-      </button>
+      <NavMenu />
     </div>
   </header>
 );
