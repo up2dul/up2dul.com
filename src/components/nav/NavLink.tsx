@@ -11,7 +11,7 @@ type NavLinkProps = PropsWithChildren<{
 const NavLink = ({ to, isActive, children }: NavLinkProps) => (
   <li
     className={cn(
-      'text-2xl font-semibold',
+      'text-2xl font-medium',
       isActive
         ? 'text-gradient py-1 px-4'
         : 'decoration-blue-600 decoration-4 transition-colors hover:text-blue-600 hover:underline',

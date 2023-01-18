@@ -11,7 +11,7 @@ const Header = () => (
       'sm:flex-row sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72',
     )}
   >
-    <h4 className='font-semibold'>{currentTime} (UTC +07:00)</h4>
+    <h4 className='font-medium'>{currentTime} (UTC +07:00)</h4>
 
     <div className='flex w-full items-center justify-evenly gap-10 text-3xl sm:w-auto'>
       <ThemeButton />
