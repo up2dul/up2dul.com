@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 .text-gradient {
-  @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent;
 }
 
 .text-link {
-  @apply text-blue-800 decoration-2 underline-offset-2 hover:underline dark:text-blue-600;
+  @apply text-blue-700 decoration-2 underline-offset-2 hover:underline dark:text-blue-400;
+}
+
+.main-container {
+  @apply px-8 xs:px-12 sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72;
 }
 
 @layer base {
+  * { @apply leading-normal; }
   *::selection { @apply bg-blue-500 text-bunker-800; }
 
   h1,
@@ -19,7 +24,7 @@
   h4,
   h5 { @apply font-bold; }
 
-  h1 { @apply text-5xl; }
+  h1 { @apply text-4xl xs:text-[40px] sm:text-[42px]; }
   h2 { @apply text-3xl; }
   h3 { @apply text-2xl; }
   h4 { @apply text-lg; }
