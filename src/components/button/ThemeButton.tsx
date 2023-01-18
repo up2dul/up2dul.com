@@ -1,10 +1,18 @@
+import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
 const ThemeButton = () => {
+  const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   const handleToggleTheme = (): void => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
@@ -13,7 +21,7 @@ const ThemeButton = () => {
   return (
     <button
       className={cn(
-        'rounded-md p-1 transition-colors',
+        'rounded-md py-2 px-3 transition-colors',
         'hover:bg-bunker-100 dark:hover:bg-geyser-900',
       )}
       onClick={handleToggleTheme}
