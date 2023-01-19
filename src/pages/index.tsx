@@ -1,5 +1,8 @@
 import Head from 'next/head';
+import Balancer from 'react-wrap-balancer';
 import type { NextPage } from 'next';
+
+import ContactList from '@/components/ContactList';
 
 const Home: NextPage = () => (
   <>
@@ -9,13 +12,19 @@ const Home: NextPage = () => (
       <link rel='icon' href='/favicon.ico' />
     </Head>
 
-    <h1>Hello Next.js h1</h1>
-    <h2>Hello Next.js h2</h2>
-    <h3>Hello Next.js h3</h3>
-    <h4>Hello Next.js h4</h4>
-    <h5>Hello Next.js h5</h5>
+    <h1>
+      👋 Hi there, <br />
+      I&apos;m <span className='text-gradient'>Abdul Malik</span>!
+    </h1>
 
-    <p>this is paragraph</p>
+    <ContactList />
+
+    <p>
+      <Balancer>
+        A self-taught developer who is currently interested and diving into the
+        world of Frontend web development.
+      </Balancer>
+    </p>
   </>
 );
 
