@@ -1,8 +1,8 @@
-import { cn, getCurrentTime } from '@/lib/utils';
+import Link from 'next/link';
+
+import { cn } from '@/lib/utils';
 import ThemeButton from '@/components/button/ThemeButton';
 import NavMenu from '@/components/nav/NavMenu';
-
-const currentTime = getCurrentTime();
 
 const Header = () => (
   <header
@@ -12,7 +12,9 @@ const Header = () => (
       'sm:flex-row',
     )}
   >
-    <h4 className='font-medium'>{currentTime} (UTC +07:00)</h4>
+    <h4 className='font-bold'>
+      <Link href='/'>up2dul.com</Link>
+    </h4>
 
     <div className='flex w-full items-center justify-evenly gap-10 text-3xl sm:w-auto'>
       <ThemeButton />
