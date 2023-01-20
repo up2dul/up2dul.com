@@ -1,9 +1,17 @@
+import { motion } from 'framer-motion';
+
 import { cn } from '@/lib/utils';
 import { contactList } from '@/lib/misc';
+import { slideVariants } from '@/lib/motion';
 import MyTooltip from './MyTooltip';
 
 const ContactList = () => (
-  <div className='mt-5 mb-7 flex justify-center gap-6 sm:gap-8 lg:gap-10'>
+  <motion.div
+    variants={slideVariants(0.4)}
+    initial='hidden'
+    whileInView='show'
+    className='mt-5 mb-7 flex justify-center gap-6 sm:gap-8 lg:gap-10'
+  >
     {contactList.map((contact) => (
       <MyTooltip key={contact.url} content={contact.title}>
         <a
@@ -19,7 +27,7 @@ const ContactList = () => (
         </a>
       </MyTooltip>
     ))}
-  </div>
+  </motion.div>
 );
 
 export default ContactList;
