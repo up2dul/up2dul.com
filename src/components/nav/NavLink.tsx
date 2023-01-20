@@ -17,7 +17,8 @@ const NavLink = ({ to, isActive, children }: NavLinkProps) => (
         href={to}
         className={cn(
           'py-1 px-4',
-          'decoration-blue-600 decoration-4 transition-colors hover:text-blue-600 hover:underline',
+          'decoration-blue-600 decoration-4 transition-colors',
+          'hover:text-blue-600 hover:underline',
         )}
       >
         {children}
