@@ -24,7 +24,7 @@
   h4,
   h5 { @apply font-bold; }
 
-  h1 { @apply text-4xl xs:text-[40px] sm:text-[42px]; }
+  h1 { @apply text-[38px] xs:text-[40px] sm:text-[42px] md:text-[48px]; }
   h2 { @apply text-3xl; }
   h3 { @apply text-2xl; }
   h4 { @apply text-lg; }
