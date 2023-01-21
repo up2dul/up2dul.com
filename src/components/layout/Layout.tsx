@@ -1,17 +1,35 @@
-import { Plus_Jakarta_Sans } from '@next/font/google';
+import localFont from '@next/font/local';
 import type { PropsWithChildren as LayoutProps } from 'react';
 
 import SkipToContent from '@/components/button/SkipToContent';
 import Header from './Header';
 import Footer from './Footer';
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
+const satoshi = localFont({
+  src: [
+    {
+      path: '../../assets/fonts/Satoshi-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../assets/fonts/Satoshi-Medium.woff2',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../assets/fonts/Satoshi-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+});
 
 const Layout = ({ children }: LayoutProps) => (
   <>
     <style jsx global>{`
       html {
-        font-family: ${jakarta.style.fontFamily};
+        font-family: ${satoshi.style.fontFamily};
       }
     `}</style>
 
