@@ -8,6 +8,7 @@ const Footer = () => (
         Code on{' '}
         <a
           href='https://github.com/up2dul/up2dul.com'
+          aria-label='Source code'
           target='_blank'
           className='text-link cursor-alias'
           rel='noreferrer'

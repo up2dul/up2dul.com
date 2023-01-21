@@ -15,6 +15,7 @@ const NavMenu = () => {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button
+          aria-label='Nav menu button'
           className={cn(
             'rounded-md py-1 px-2 transition-colors',
             'hover:bg-bunker-100 dark:hover:bg-geyser-900',

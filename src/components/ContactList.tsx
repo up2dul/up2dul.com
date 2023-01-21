@@ -16,6 +16,7 @@ const ContactList = () => (
       <MyTooltip key={contact.url} content={contact.title}>
         <a
           href={contact.url}
+          aria-label={contact.title}
           className={cn(
             'block cursor-alias p-1 transition-colors',
             'hover:text-blue-700 dark:hover:text-blue-400',

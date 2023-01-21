@@ -24,6 +24,7 @@ const ThemeButton = () => {
       content={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
     >
       <button
+        aria-label='Theme button'
         className={cn(
           'rounded-md py-2 px-3 transition-colors',
           'hover:bg-bunker-100 dark:hover:bg-geyser-900',
