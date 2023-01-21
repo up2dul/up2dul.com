@@ -15,7 +15,7 @@
 }
 
 @layer base {
-  * { @apply leading-normal; }
+  * { @apply leading-normal tracking-wide; }
   *::selection { @apply bg-blue-500 text-bunker-800; }
 
   h1,
