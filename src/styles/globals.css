@@ -15,7 +15,7 @@
 }
 
 @layer base {
-  * { @apply leading-normal tracking-wide; }
+  * { @apply leading-normal; }
   *::selection { @apply bg-blue-500 text-bunker-800; }
 
   h1,
@@ -30,7 +30,7 @@
   h4 { @apply text-lg; }
   h5 { @apply text-sm; }
 
-  p { @apply text-base text-bunker-800 dark:text-geyser-200; }
+  p { @apply tracking-wide text-base text-bunker-800 dark:text-geyser-200; }
 
   a:focus,
   button:focus {
