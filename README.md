@@ -1,8 +1,7 @@
 ## TO-DO
----
 
 ### Improvements
-- [ ] @vercel/og
+- [x] @vercel/og
 - [x] @next/font
 - [ ] next/image
 - [ ] next-seo
