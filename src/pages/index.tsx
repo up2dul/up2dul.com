@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Balancer from 'react-wrap-balancer';
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
@@ -8,12 +7,6 @@ import { slideVariants } from '@/lib/motion';
 
 const Home: NextPage = () => (
   <>
-    <Head>
-      <title>Hello Next.js</title>
-      <meta name='description' content='Crafted using Next.js' />
-      <link rel='icon' href='/favicon.ico' />
-    </Head>
-
     <motion.h1
       variants={slideVariants(0.2)}
       initial='hidden'
