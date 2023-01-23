@@ -8,6 +8,7 @@ const SEO: DefaultSeoProps = {
   themeColor: '#0070f3',
   openGraph: {
     type: 'website',
+    url: process.env.NEXT_PUBLIC_SITE_URL,
     title: 'Abdul Malik',
     description:
       'My personal website, a website where I showcase some my projects, skills, contacts, etc.',
