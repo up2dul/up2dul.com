@@ -23,4 +23,24 @@ const SEO: DefaultSeoProps = {
   },
 };
 
-export default SEO;
+const notFoundSEO: DefaultSeoProps = {
+  ...SEO,
+  title: 'Page not found',
+  description: 'Error 404 - This page could not be found',
+  openGraph: {
+    type: 'website',
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    title: 'Page not found',
+    description: 'Error 404 - This page could not be found',
+    images: [
+      {
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=Error 404 - page not found`,
+        width: 1200,
+        height: 630,
+        type: 'image/jpeg',
+      },
+    ],
+  },
+};
+
+export { SEO, notFoundSEO };
