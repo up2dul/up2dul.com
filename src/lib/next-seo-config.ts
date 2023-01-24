@@ -42,13 +42,13 @@ const SEO: DefaultSeoProps = {
   ],
   openGraph: {
     type: 'website',
-    url: process.env.NEXT_PUBLIC_SITE_URL,
+    url: SITE_URL,
     title: 'Abdul Malik',
     description:
       'My personal website, a website where I showcase some my projects, skills, contacts, etc.',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og`,
+        url: `${SITE_URL}/api/og`,
         width: 1200,
         height: 630,
         type: 'image/jpeg',
