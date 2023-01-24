@@ -32,8 +32,7 @@
 
   p { @apply tracking-wide text-base text-bunker-800 dark:text-geyser-200; }
 
-  a:focus,
-  button:focus {
+  :is(a, button):focus {
     @apply rounded-md outline-none ring-2 ring-blue-600 ring-offset-1 ring-offset-transparent transition-all;
   }
 
