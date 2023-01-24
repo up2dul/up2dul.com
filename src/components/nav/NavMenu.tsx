@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import * as Dialog from '@radix-ui/react-dialog';
 import { motion } from 'framer-motion';
@@ -9,10 +10,15 @@ import { navMenuVariants } from '@/lib/motion';
 import NavLink from './NavLink';
 
 const NavMenu = () => {
+  const [open, setOpen] = useState<boolean>(false);
   const { pathname } = useRouter();
 
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   return (
-    <Dialog.Root>
+    <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
         <button
           aria-label='Nav menu button'
