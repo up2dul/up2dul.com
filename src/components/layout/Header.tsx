@@ -7,7 +7,7 @@ import NavMenu from '@/components/nav/NavMenu';
 const Header = () => (
   <header
     className={cn(
-      'main-container fixed top-0 z-10 w-full py-3 backdrop-blur-md',
+      'main-container fixed top-0 z-10 w-full py-3 backdrop-blur-sm',
       'flex flex-col items-center justify-between gap-4',
       'sm:flex-row',
     )}
