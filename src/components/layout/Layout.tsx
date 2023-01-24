@@ -41,10 +41,10 @@ const Layout = ({ children }: LayoutProps) => (
 
     <Header />
 
-    <main className='flex min-h-screen flex-col justify-between pt-[100px] sm:pt-[64px]'>
+    <main className='flex min-h-screen flex-col justify-between gap-10 pt-[100px] sm:pt-[64px]'>
       <section
         id='main-content'
-        className='main-container my-auto py-14 text-center'
+        className='main-container my-auto pt-10 text-center'
       >
         {children}
       </section>
