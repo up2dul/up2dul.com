@@ -3,7 +3,10 @@ import { Html, Head, Main, NextScript } from 'next/document';
 import { cn } from '@/lib/utils';
 
 const Document = () => (
-  <Html lang='en' className='scroll-smooth'>
+  <Html
+    lang='en'
+    className='scroll-pt-[124px] scroll-smooth sm:scroll-pt-[88px]'
+  >
     <Head />
     <body
       className={cn(
