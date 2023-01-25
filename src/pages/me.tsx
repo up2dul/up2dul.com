@@ -3,9 +3,10 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
 import { slideVariants } from '@/lib/motion';
+import SectionLink from '@/components/button/SectionLink';
 
 const Me = () => (
-  <section className='flex flex-col items-center gap-10'>
+  <div className='flex flex-col items-center gap-10'>
     <NextSeo
       title='About me'
       openGraph={{
@@ -37,31 +38,33 @@ const Me = () => (
     </motion.div>
 
     <div className='flex flex-col gap-6 self-start text-left'>
-      <motion.article
+      <motion.section
         variants={slideVariants(0.6)}
         initial='hidden'
         animate='show'
       >
-        <h3>
+        <h3 id='short-story'>
+          <SectionLink href='#short-story' />
           💬 Short story about <span className='text-gradient'>me</span>
         </h3>
         <p className='mt-3'>
           Hello, my name is Abdul malik, and my internet name is up2dul. I am a
-          20 y.o man from Jakarta, Indonesia. I ave been interested and
+          20 y.o man from Jakarta, Indonesia. I have been interested and
           passionate in programming since 2019, precisely when I was in high
           school. What made me interested was when I saw the chatbot on the LINE
           application, and then I am exploring how to make it on the internet,
           in the end, I did it (even mine was a very simple chatbot). After
           that, I focus diving into web programming then.
         </p>
-      </motion.article>
+      </motion.section>
 
-      <motion.article
+      <motion.section
         variants={slideVariants(0.8)}
         initial='hidden'
         animate='show'
       >
-        <h3>
+        <h3 id='things-to-do'>
+          <SectionLink href='#things-to-do' />
           🧩 What <span className='text-gradient'>things</span> I do now
         </h3>
         <p className='mt-3'>
@@ -71,14 +74,15 @@ const Me = () => (
           well as online courses. I also practice by creating and working on
           various projects and apps.
         </p>
-      </motion.article>
+      </motion.section>
 
-      <motion.article
+      <motion.section
         variants={slideVariants(1)}
         initial='hidden'
         animate='show'
       >
-        <h3>
+        <h3 id='fun-facts'>
+          <SectionLink href='#fun-facts' />
           💡 Fun <span className='text-gradient'>facts</span>
         </h3>
         <p className='mt-3'>
@@ -88,9 +92,9 @@ const Me = () => (
           Liye. These books by Tere Liye are truly fantastic and always leave me
           wanting to purchase more of his books.
         </p>
-      </motion.article>
+      </motion.section>
     </div>
-  </section>
+  </div>
 );
 
 export default Me;
