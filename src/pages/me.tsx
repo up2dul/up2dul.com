@@ -10,7 +10,7 @@ const Me = () => (
     <NextSeo
       title='About me'
       openGraph={{
-        url: process.env.NEXT_PUBLIC_SITE_URL,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/me`,
         title: 'About me',
         images: [
           {
