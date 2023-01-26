@@ -6,7 +6,7 @@ import { slideVariants } from '@/lib/motion';
 import SectionLink from '@/components/button/SectionLink';
 
 const Me = () => (
-  <div className='flex flex-col items-center gap-10'>
+  <>
     <NextSeo
       title='About me'
       openGraph={{
@@ -27,17 +27,22 @@ const Me = () => (
       👨‍💻 About <span className='text-gradient'>me</span>
     </motion.h2>
 
-    <motion.div variants={slideVariants(0.4)} initial='hidden' animate='show'>
+    <motion.section
+      variants={slideVariants(0.4)}
+      initial='hidden'
+      animate='show'
+      className='mt-10'
+    >
       <Image
         src='/img/avatar.webp'
         alt='Me'
         width={140}
         height={140}
-        className='rounded-full'
+        className='mx-auto rounded-full'
       />
-    </motion.div>
+    </motion.section>
 
-    <div className='flex flex-col gap-6 self-start text-left'>
+    <div className='mt-10 flex flex-col gap-6 self-start text-left'>
       <motion.section
         variants={slideVariants(0.6)}
         initial='hidden'
@@ -94,7 +99,7 @@ const Me = () => (
         </p>
       </motion.section>
     </div>
-  </div>
+  </>
 );
 
 export default Me;
