@@ -27,7 +27,7 @@ const Me = () => (
       👨‍💻 About <span className='text-gradient'>me</span>
     </motion.h2>
 
-    <motion.section
+    <motion.figure
       variants={slideVariants(0.4)}
       initial='hidden'
       animate='show'
@@ -40,7 +40,7 @@ const Me = () => (
         height={140}
         className='mx-auto rounded-full'
       />
-    </motion.section>
+    </motion.figure>
 
     <div className='mt-10 flex flex-col gap-6 self-start text-left'>
       <motion.section
