@@ -18,6 +18,10 @@
   @apply opacity-100;
 }
 
+.card { @apply block rounded-lg bg-gradient-to-br from-blue-700 to-blue-900 p-1 transition-transform hover:scale-[1.02]; }
+
+.card:hover h3 { @apply text-blue-500 underline decoration-4 underline-offset-2 transition-all; }
+
 @layer base {
   * { @apply leading-normal; }
   *::selection { @apply bg-blue-500 text-bunker-800; }
