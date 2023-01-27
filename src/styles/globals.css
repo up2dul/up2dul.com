@@ -37,4 +37,17 @@
   }
 
   footer p { @apply text-sm font-medium; }
+
+  /* scrollbar */
+  /* width */
+  ::-webkit-scrollbar { @apply w-2; }
+
+  /* Track */
+  ::-webkit-scrollbar-track { @apply bg-bunker-200 dark:bg-bunker-800; }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb { @apply bg-blue-600 rounded-sm; }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover { @apply bg-blue-800 dark:bg-blue-400; }
 }
