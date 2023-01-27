@@ -25,6 +25,7 @@ const satoshi = localFont({
       style: 'normal',
     },
   ],
+  display: 'swap',
 });
 
 const Layout = ({ children }: LayoutProps) => (
