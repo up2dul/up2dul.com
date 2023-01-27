@@ -14,6 +14,10 @@
   @apply px-8 xs:px-12 sm:px-20 sm:py-4 md:px-40 lg:px-56 xl:px-72;
 }
 
+.section-title:is(:hover, :focus) svg {
+  @apply opacity-100;
+}
+
 @layer base {
   * { @apply leading-normal; }
   *::selection { @apply bg-blue-500 text-bunker-800; }

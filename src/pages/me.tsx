@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
 import { slideVariants } from '@/lib/motion';
-import SectionLink from '@/components/button/SectionLink';
+import SectionTitle from '@/components/SectionTitle';
 
 const Me = () => (
   <>
@@ -23,9 +23,16 @@ const Me = () => (
       }}
     />
 
-    <motion.h2 variants={slideVariants(0.2)} initial='hidden' animate='show'>
-      👨‍💻 About <span className='text-gradient'>me</span>
-    </motion.h2>
+    <motion.section
+      variants={slideVariants(0.2)}
+      initial='hidden'
+      animate='show'
+    >
+      <h2>
+        👨‍💻 About <span className='text-gradient'>me</span>
+      </h2>
+      <p className='mt-3'>More about me here</p>
+    </motion.section>
 
     <motion.figure
       variants={slideVariants(0.4)}
@@ -48,10 +55,9 @@ const Me = () => (
         initial='hidden'
         animate='show'
       >
-        <h3 id='short-story'>
-          <SectionLink href='#short-story' />
+        <SectionTitle id='short-story'>
           💬 Short story about <span className='text-gradient'>me</span>
-        </h3>
+        </SectionTitle>
         <p className='mt-3'>
           Hello, my name is Abdul malik, and my internet name is up2dul. I am a
           20 y.o man from Jakarta, Indonesia. I have been interested and
@@ -68,10 +74,9 @@ const Me = () => (
         initial='hidden'
         animate='show'
       >
-        <h3 id='things-to-do'>
-          <SectionLink href='#things-to-do' />
+        <SectionTitle id='things-to-do'>
           🧩 What <span className='text-gradient'>things</span> I do now
-        </h3>
+        </SectionTitle>
         <p className='mt-3'>
           I am currently focusing on expanding my knowledge and skills in
           React.js, Next.js, Typescript, and related Frontend technologies by
@@ -86,10 +91,9 @@ const Me = () => (
         initial='hidden'
         animate='show'
       >
-        <h3 id='fun-facts'>
-          <SectionLink href='#fun-facts' />
+        <SectionTitle id='fun-facts'>
           💡 Fun <span className='text-gradient'>facts</span>
-        </h3>
+        </SectionTitle>
         <p className='mt-3'>
           Apart from programming, one of the things I enjoy is reading books
           (even though I may not be as consistent with it currently). My reading
