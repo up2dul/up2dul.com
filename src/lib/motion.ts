@@ -16,7 +16,7 @@ const tooltipVariants: Variants = {
 const navMenuVariants: Variants = {
   hidden: {
     opacity: 0,
-    scale: 0.8,
+    scale: 0.5,
   },
   show: {
     opacity: 1,
@@ -32,7 +32,7 @@ const slideVariants = (delay: number): Variants => ({
   hidden: {
     y: 50,
     opacity: 0,
-    scale: 0.7,
+    scale: 0,
   },
   show: {
     y: 0,
