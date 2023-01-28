@@ -57,7 +57,7 @@ const SEO: DefaultSeoProps = {
   },
 };
 
-const notFoundSEO: DefaultSeoProps = {
+const NOT_FOUND_SEO: DefaultSeoProps = {
   ...SEO,
   title: 'Page not found',
   description: 'Error 404 - This page could not be found',
@@ -77,4 +77,4 @@ const notFoundSEO: DefaultSeoProps = {
   },
 };
 
-export { SEO, notFoundSEO };
+export { SEO, NOT_FOUND_SEO };

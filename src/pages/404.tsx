@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 
-import { notFoundSEO } from '@/lib/next-seo-config';
+import { NOT_FOUND_SEO } from '@/lib/next-seo-config';
 
 const NotFound = () => (
   <>
-    <NextSeo {...notFoundSEO} />
+    <NextSeo {...NOT_FOUND_SEO} />
 
     <h1>
       <Balancer>
