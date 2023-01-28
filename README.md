@@ -3,8 +3,8 @@
 ### Improvements
 - [x] @vercel/og
 - [x] @next/font
-- [ ] next/image
-- [ ] next-seo
+- [x] next/image
+- [x] next-seo
 - [ ] next-sitemap
 
 ### UI
@@ -13,8 +13,8 @@
   - [ ] Progress bar
   - [x] Header
   - [x] Footer
-- [ ] Home
+- [x] Home
 - [ ] Blog
 - [ ] Projects
-- [ ] About me
+- [x] About me
 - [ ] About site
