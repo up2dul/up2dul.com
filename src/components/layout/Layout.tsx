@@ -2,7 +2,8 @@ import localFont from '@next/font/local';
 import { NextSeo } from 'next-seo';
 import type { PropsWithChildren as LayoutProps } from 'react';
 
-import { SEO } from '@/lib/next-seo-config';
+import { SEO } from 'next-seo.config';
+
 import SkipToContent from '@/components/button/SkipToContent';
 import Header from './Header';
 import Footer from './Footer';

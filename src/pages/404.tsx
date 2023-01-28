@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 
-import { NOT_FOUND_SEO } from '@/lib/next-seo-config';
+import { NOT_FOUND_SEO } from 'next-seo.config';
 
 const NotFound = () => (
   <>
