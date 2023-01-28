@@ -1,11 +1,17 @@
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 import { motion } from 'framer-motion';
+import { allProjects, type Project } from 'contentlayer/generated';
 
+import { selectField } from '@/lib/utils';
 import { slideVariants } from '@/lib/motion';
 import Card from '@/components/Card';
 
-const Projects = () => (
+const Projects = ({
+  projects,
+}: {
+  projects: Pick<Project, 'slug' | 'title' | 'description'>[];
+}) => (
   <>
     <NextSeo
       title='Projects'
@@ -44,21 +50,29 @@ const Projects = () => (
       animate='show'
       className='mt-10 grid w-full grid-cols-1 gap-12 lg:grid-cols-2'
     >
-      <Card
-        href='#'
-        order='01'
-        title='Todo'
-        description='lorem ipsum dolor sit amet john doe jane doe'
-      />
-
-      <Card
-        href='#'
-        order='02'
-        title='Forum'
-        description='lorem ipsum dolor sit amet john doe jane doe'
-      />
+      {projects.map(({ slug, title, description }, idx) => (
+        <Card
+          key={slug}
+          href={`/projects/${slug}`}
+          order={`0${++idx}`}
+          title={title}
+          description={description}
+        />
+      ))}
     </motion.section>
   </>
 );
+
+export function getStaticProps() {
+  const projects = allProjects.map((project) =>
+    selectField(project, ['slug', 'title', 'description']),
+  );
+
+  return {
+    props: {
+      projects,
+    },
+  };
+}
 
 export default Projects;
