@@ -14,8 +14,20 @@ export const Project = defineDocumentType(() => ({
       required: true,
     },
     createdAt: {
+      type: 'date',
+      required: true,
+    },
+    demo_link: {
       type: 'string',
       required: true,
+    },
+    repo_link: {
+      type: 'string',
+      required: true,
+    },
+    tags: {
+      type: 'list',
+      of: { type: 'string' },
     },
   },
   computedFields: {
