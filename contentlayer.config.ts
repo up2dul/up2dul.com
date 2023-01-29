@@ -2,7 +2,8 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
-  filePathPattern: `**/*.md`,
+  filePathPattern: `**/*.mdx`,
+  contentType: 'mdx',
   fields: {
     title: {
       type: 'string',
