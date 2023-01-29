@@ -7,10 +7,10 @@ type CardProps = {
   order: string;
   title: string;
   description: string;
-  categories?: string[];
+  tags?: string[];
 };
 
-const Card = ({ href, order, title, description }: CardProps) => (
+const Card = ({ href, order, title, description, tags }: CardProps) => (
   <Link href={href} className='card'>
     <article className='flex h-full flex-col justify-between gap-5 rounded-lg bg-geyser-50 p-6 text-left dark:bg-bunker-900'>
       <div className='flex items-start gap-2'>
@@ -21,8 +21,9 @@ const Card = ({ href, order, title, description }: CardProps) => (
       <p>{description}</p>
 
       <div className='flex flex-wrap gap-x-3 gap-y-2'>
-        <Tag>React</Tag>
-        <Tag>Typescript</Tag>
+        {tags?.map((tag) => (
+          <Tag key={tag}>{tag}</Tag>
+        ))}
       </div>
     </article>
   </Link>
