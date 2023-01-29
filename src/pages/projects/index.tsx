@@ -10,7 +10,7 @@ import Card from '@/components/Card';
 const Projects = ({
   projects,
 }: {
-  projects: Pick<Project, 'slug' | 'title' | 'description'>[];
+  projects: Pick<Project, 'slug' | 'title' | 'description' | 'tags'>[];
 }) => (
   <>
     <NextSeo
@@ -50,13 +50,12 @@ const Projects = ({
       animate='show'
       className='mt-10 grid w-full grid-cols-1 gap-12 lg:grid-cols-2'
     >
-      {projects.map(({ slug, title, description }, idx) => (
+      {projects.map((project, idx) => (
         <Card
-          key={slug}
-          href={`/projects/${slug}`}
+          {...project}
+          key={project.slug}
+          href={`/projects/${project.slug}`}
           order={`0${++idx}`}
-          title={title}
-          description={description}
         />
       ))}
     </motion.section>
@@ -65,7 +64,7 @@ const Projects = ({
 
 export function getStaticProps() {
   const projects = allProjects.map((project) =>
-    selectField(project, ['slug', 'title', 'description']),
+    selectField(project, ['slug', 'title', 'description', 'tags']),
   );
 
   return {
