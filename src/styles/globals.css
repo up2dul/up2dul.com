@@ -7,7 +7,7 @@
 }
 
 .text-link {
-  @apply text-blue-700 decoration-2 underline-offset-2 hover:underline dark:text-blue-400;
+  @apply text-blue-700 font-medium decoration-2 underline-offset-2 hover:underline dark:text-blue-400;
 }
 
 .main-container {
@@ -18,7 +18,9 @@
   @apply opacity-100;
 }
 
-.card { @apply block rounded-lg bg-gradient-to-br from-blue-700 to-blue-900 p-1 transition-transform hover:scale-[1.02]; }
+.card {
+  @apply block rounded-lg bg-gradient-to-br from-blue-700 to-blue-900 p-1 transition-transform hover:scale-[1.02];
+}
 
 .card:hover h3 { @apply text-blue-500 underline decoration-4 underline-offset-2 transition-all; }
 
