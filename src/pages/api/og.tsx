@@ -8,11 +8,11 @@ export const config = {
 };
 
 const satoshiBoldFont = fetch(
-  new URL('../../assets/fonts/Satoshi-Bold.ttf', import.meta.url),
+  new URL('../../../public/static/fonts/Satoshi-Bold.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const satoshiMediumFont = fetch(
-  new URL('../../assets/fonts/Satoshi-Medium.ttf', import.meta.url),
+  new URL('../../../public/static/fonts/Satoshi-Medium.ttf', import.meta.url),
 ).then((res) => res.arrayBuffer());
 
 const faviconUrl =
