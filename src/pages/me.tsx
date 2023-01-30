@@ -41,7 +41,7 @@ const Me = () => (
       className='mt-10'
     >
       <Image
-        src='/img/avatar.webp'
+        src='/static/images/avatar.webp'
         alt='Me'
         width={140}
         height={140}
