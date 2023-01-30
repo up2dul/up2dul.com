@@ -3,10 +3,9 @@ import type { DefaultSeoProps } from 'next-seo';
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL;
 
 const SEO: DefaultSeoProps = {
-  titleTemplate: "%s | Abdul Malik's site",
+  titleTemplate: '%s | Abdul Malik',
   defaultTitle: 'Abdul Malik',
-  description:
-    'My personal website, a website where I showcase some my projects, skills, contacts, etc.',
+  description: 'Self-taught Frontend developer based in Indonesia',
   themeColor: '#0070f3',
   additionalLinkTags: [
     {
@@ -41,11 +40,10 @@ const SEO: DefaultSeoProps = {
     },
   ],
   openGraph: {
-    type: 'website',
     url: SITE_URL,
+    siteName: 'Abdul Malik',
     title: 'Abdul Malik',
-    description:
-      'My personal website, a website where I showcase some my projects, skills, contacts, etc.',
+    description: 'Self-taught Frontend developer based in Indonesia',
     images: [
       {
         url: `${SITE_URL}/api/og`,
@@ -54,6 +52,7 @@ const SEO: DefaultSeoProps = {
         type: 'image/jpeg',
       },
     ],
+    type: 'website',
   },
 };
 
@@ -63,7 +62,6 @@ const NOT_FOUND_SEO: DefaultSeoProps = {
   description: 'Error 404 - This page could not be found',
   openGraph: {
     type: 'website',
-    url: SITE_URL,
     title: 'Page not found',
     description: 'Error 404 - This page could not be found',
     images: [
