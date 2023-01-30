@@ -15,9 +15,11 @@ const Projects = ({
   <>
     <NextSeo
       title='Projects'
+      description='My projects showcase'
       openGraph={{
         url: `${process.env.NEXT_PUBLIC_SITE_URL}/projects`,
         title: 'Projects',
+        description: 'My projects showcase',
         images: [
           {
             url: `${process.env.NEXT_PUBLIC_SITE_URL}/api/og?title=My projects`,
