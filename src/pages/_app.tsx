@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
 import { Provider } from 'react-wrap-balancer';
 import type { AppType } from 'next/app';
@@ -10,6 +11,7 @@ const MyApp: AppType = ({ Component, pageProps }) => (
     <Provider>
       <Layout>
         <Component {...pageProps} />
+        <Analytics />
       </Layout>
     </Provider>
   </ThemeProvider>
