@@ -1,4 +1,21 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import {
+  defineDocumentType,
+  defineNestedType,
+  makeSource,
+} from 'contentlayer/source-files';
+import rehypeSlug from 'rehype-slug';
+
+const Link = defineNestedType(() => ({
+  name: 'Link',
+  fields: {
+    demo: {
+      type: 'string',
+    },
+    repo: {
+      type: 'string',
+    },
+  },
+}));
 
 export const Project = defineDocumentType(() => ({
   name: 'Project',
@@ -17,13 +34,9 @@ export const Project = defineDocumentType(() => ({
       type: 'date',
       required: true,
     },
-    demo_link: {
-      type: 'string',
-      required: true,
-    },
-    repo_link: {
-      type: 'string',
-      required: true,
+    link: {
+      type: 'nested',
+      of: Link,
     },
     tags: {
       type: 'list',
@@ -39,6 +52,9 @@ export const Project = defineDocumentType(() => ({
 }));
 
 export default makeSource({
+  mdx: {
+    rehypePlugins: [rehypeSlug],
+  },
   contentDirPath: './src/content/projects',
   documentTypes: [Project],
 });
