@@ -5,10 +5,11 @@ import { cn } from '@/lib/utils';
 
 type SectionTitle = PropsWithChildren<{
   id: string;
+  className?: string;
 }>;
 
-const SectionTitle = ({ id, children }: SectionTitle) => (
-  <h3 id={id}>
+const SectionTitle = ({ id, className, children }: SectionTitle) => (
+  <h3 id={id} className={className}>
     <a href={'#' + id} className='section-title'>
       <Hash
         className={cn(
