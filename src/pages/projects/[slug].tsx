@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 import { allProjects, type Project } from 'contentlayer/generated';
+import { motion } from 'framer-motion';
 import { Github, Globe } from 'lucide-react';
 
 import { slideVariants } from '@/lib/motion';
+import MDXComponents from '@/components/MDXComponents';
 import Tag from '@/components/Tag';
 
 const Project = ({ project }: { project: Project }) => {
-  const { slug, title, description, tags, demo_link, repo_link } = project;
+  const MDXContent = useMDXComponent(project.body.code);
+  const { slug, title, description, tags, link } = project;
 
   return (
     <>
@@ -58,24 +61,33 @@ const Project = ({ project }: { project: Project }) => {
 
         <div className='flex gap-10'>
           <a
-            href={demo_link}
+            href={link?.demo}
             aria-label='Demo'
             target='_blank'
-            className='text-link cursor-alias'
+            className='text-link flex cursor-alias items-center gap-1'
             rel='noreferrer'
           >
-            <Globe className='inline w-4' /> Demo
+            <Globe className='w-4' /> Demo
           </a>
           <a
-            href={repo_link}
+            href={link?.repo}
             aria-label='Repository'
             target='_blank'
-            className='text-link cursor-alias'
+            className='text-link flex cursor-alias items-center gap-1'
             rel='noreferrer'
           >
             <Github className='inline w-4' /> Repository
           </a>
         </div>
+      </motion.section>
+
+      <motion.section
+        variants={slideVariants(0.6)}
+        initial='hidden'
+        animate='show'
+        className='mt-10 text-left'
+      >
+        <MDXContent components={MDXComponents} />
       </motion.section>
     </>
   );
