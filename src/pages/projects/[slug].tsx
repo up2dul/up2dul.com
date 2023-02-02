@@ -16,7 +16,7 @@ const Project = ({ project }: { project: Project }) => {
   return (
     <>
       <NextSeo
-        title={title}
+        title={`${title} - Project`}
         description={description}
         openGraph={{
           url: `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slug}`,
@@ -45,7 +45,7 @@ const Project = ({ project }: { project: Project }) => {
       >
         <figure className='rounded-lg bg-gradient-to-br from-blue-700 to-blue-900 p-1'>
           <Image
-            src='/static/images/projects/diforum.webp'
+            src={`/static/images/projects/${slug}.webp`}
             alt={`${title} screenshot`}
             width={440}
             height={220}
