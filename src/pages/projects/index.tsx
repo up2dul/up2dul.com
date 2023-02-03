@@ -65,9 +65,19 @@ const Projects = ({
 );
 
 export function getStaticProps() {
-  const projects = allProjects.map((project) =>
-    selectField(project, ['slug', 'title', 'description', 'tags']),
-  );
+  const projects = allProjects
+    .map((project) =>
+      selectField(project, [
+        'slug',
+        'title',
+        'description',
+        'createdAt',
+        'tags',
+      ]),
+    )
+    .sort(
+      (a, b) => Number(new Date(b.createdAt)) - Number(new Date(a.createdAt)),
+    );
 
   return {
     props: {
