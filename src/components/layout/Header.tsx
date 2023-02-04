@@ -12,7 +12,7 @@ const Header = () => (
       'sm:flex-row',
     )}
   >
-    <h4 className='font-bold'>
+    <h4 className='font-bold drop-shadow-md'>
       <Link href='/'>up2dul.com</Link>
     </h4>
 
