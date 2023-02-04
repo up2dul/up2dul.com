@@ -7,8 +7,8 @@ const navMenuList: NavMenu[] = [
     content: 'Home',
   },
   {
-    href: '/blog',
-    content: 'Blog',
+    href: '/posts',
+    content: 'Posts',
   },
   {
     href: '/projects',
