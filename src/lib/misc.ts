@@ -52,7 +52,7 @@ const contactList: Contact[] = [
   },
   {
     title: 'Resume',
-    url: 'https://bit.ly/up2dul-resume',
+    url: 'https://tinyurl.com/up2dul-resume',
     icon: FileText,
   },
 ];
