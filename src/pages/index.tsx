@@ -20,8 +20,9 @@ const Home: NextPage = () => (
 
     <motion.p variants={slideVariants(0.6)} initial='hidden' whileInView='show'>
       <Balancer>
-        A self-taught developer who is currently interested and diving into the
-        world of Frontend web development.
+        A self-taught developer who is currently focusing and diving into the
+        world of <strong>Frontend</strong> web development with{' '}
+        <strong>React.js, Next.js</strong>, and other related technologies.
       </Balancer>
     </motion.p>
   </>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
@@ -75,14 +76,30 @@ const Me = () => (
         animate='show'
       >
         <SectionTitle id='things-to-do'>
-          🧩 What <span className='text-gradient'>things</span> I do now
+          🎓 Post <span className='text-gradient'>graduated</span>
         </SectionTitle>
         <p className='mt-3'>
-          I am currently focusing on expanding my knowledge and skills in
+          After graduated from high school in 2020, I got a job to make a
+          company profile website for a company at near of my home. I built the
+          website using MongoDB as the database, and Next.js v.9 with Static
+          Site Generation fetching method for a better SEO. I built the website
+          for about 2 months (August 2020 - October 2020).
+          <br />
+          After completing the website, I remained employed at that company but
+          in a role outside of my field. Initially, I balanced work with
+          learning programming at home, but eventually, the demands of work
+          consumed all my time, causing me to lose focus on my learning. In
+          2022, I attempted to return to focus on learning programming, until I
+          resigned in October 2022 to prioritize my learning.
+          <br />I am currently focusing on expanding my knowledge and skills in
           React.js, Next.js, Typescript, and related Frontend technologies by
           learning from official documentation, articles, videos on YouTube, as
           well as online courses. I also practice by creating and working on
-          various projects and apps.
+          various projects and apps, I put these in{' '}
+          <Link href='/projects' className='text-link'>
+            here
+          </Link>
+          .
         </p>
       </motion.section>
 
