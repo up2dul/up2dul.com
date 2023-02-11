@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
+import { ArrowLeft } from 'lucide-react';
 
 import { NOT_FOUND_SEO } from 'next-seo.config';
 
@@ -19,7 +20,8 @@ const NotFound = () => (
       guessing you spelled something wrong. Can you double check the URL?
     </p>
 
-    <Link href='/' className='text-link'>
+    <Link href='/' className='text-link inline-flex items-center gap-1'>
+      <ArrowLeft />
       Back to home
     </Link>
   </>
