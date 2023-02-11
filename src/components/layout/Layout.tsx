@@ -22,7 +22,7 @@ const Layout = ({ children }: LayoutProps) => (
 
     <Header />
 
-    <main className='flex min-h-screen flex-col justify-between gap-10 pt-[114px] sm:pt-[78px]'>
+    <main className='flex min-h-screen flex-col justify-between gap-6 pt-[114px] sm:pt-[78px]'>
       <section id='main-content' className='main-container my-auto text-center'>
         {children}
       </section>
