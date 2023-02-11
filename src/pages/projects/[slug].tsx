@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { allProjects, type Project } from 'contentlayer/generated';
 import { motion } from 'framer-motion';
-import { Github, Globe } from 'lucide-react';
+import { ArrowLeft, Github, Globe } from 'lucide-react';
 
 import { slideVariants } from '@/lib/motion';
 import MDXComponents from '@/components/MDXComponents';
@@ -64,7 +65,7 @@ const Project = ({ project }: { project: Project }) => {
             href={link?.demo}
             aria-label='Demo'
             target='_blank'
-            className='text-link flex cursor-alias items-center gap-1'
+            className='text-link inline-flex cursor-alias items-center gap-1'
             rel='noreferrer'
           >
             <Globe className='w-4' /> Demo
@@ -73,7 +74,7 @@ const Project = ({ project }: { project: Project }) => {
             href={link?.repo}
             aria-label='Repository'
             target='_blank'
-            className='text-link flex cursor-alias items-center gap-1'
+            className='text-link inline-flex cursor-alias items-center gap-1'
             rel='noreferrer'
           >
             <Github className='inline w-4' /> Repository
@@ -89,6 +90,20 @@ const Project = ({ project }: { project: Project }) => {
       >
         <MDXContent components={MDXComponents} />
       </motion.section>
+
+      <motion.div
+        variants={slideVariants(0.8)}
+        initial='hidden'
+        animate='show'
+        className='mt-16 -mb-5'
+      >
+        <Link
+          href='/projects'
+          className='text-link inline-flex items-center gap-1'
+        >
+          <ArrowLeft /> Back to projects
+        </Link>
+      </motion.div>
     </>
   );
 };
