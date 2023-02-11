@@ -57,4 +57,14 @@ const contactList: Contact[] = [
   },
 ];
 
-export { navMenuList, contactList };
+const referencesList = [
+  'elianiva.my.id',
+  'honghong.me',
+  'rizkicitra.dev',
+  'sreetamdas.com',
+  'theodorusclarence.com',
+  'yehezgun.com',
+  'zhenghao.io',
+];
+
+export { navMenuList, contactList, referencesList };
