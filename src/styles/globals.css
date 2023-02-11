@@ -40,8 +40,7 @@
   h4 { @apply text-lg; }
   h5 { @apply text-sm; }
 
-  p,
-  li { @apply tracking-wide text-base text-bunker-800 dark:text-geyser-200; }
+  p { @apply tracking-wide text-base text-bunker-800 dark:text-geyser-200; }
 
   :is(a, button):focus {
     @apply rounded-md outline-none ring-2 ring-blue-600 ring-offset-1 ring-offset-transparent transition-all;
