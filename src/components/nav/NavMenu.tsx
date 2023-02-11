@@ -37,6 +37,7 @@ const NavMenu = () => {
             variants={navMenuVariants}
             initial='hidden'
             animate='show'
+            exit='hidden'
           >
             <Dialog.Content
               className={cn(
