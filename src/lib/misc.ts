@@ -57,14 +57,24 @@ const contactList: Contact[] = [
   },
 ];
 
+const techStackList = [
+  'Next.js',
+  'TypeScript',
+  'Tailwind CSS',
+  'Radix UI',
+  'Contentlayer',
+  'etc',
+];
+
 const referencesList = [
   'elianiva.my.id',
   'honghong.me',
   'rizkicitra.dev',
   'sreetamdas.com',
+  'tfkhdyt.my.id',
   'theodorusclarence.com',
   'yehezgun.com',
   'zhenghao.io',
 ];
 
-export { navMenuList, contactList, referencesList };
+export { navMenuList, contactList, techStackList, referencesList };

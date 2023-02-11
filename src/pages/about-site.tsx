@@ -2,7 +2,7 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 
 import { slideVariants } from '@/lib/motion';
-import { referencesList } from '@/lib/misc';
+import { referencesList, techStackList } from '@/lib/misc';
 import SectionTitle from '@/components/SectionTitle';
 
 const AboutSite = () => (
@@ -37,12 +37,11 @@ const AboutSite = () => (
           ⚛️ <span className='text-gradient'>Tech</span> stack
         </SectionTitle>
         <ul className='mt-3 list-disc'>
-          <li>Next.js</li>
-          <li>TypeScript</li>
-          <li>Tailwind CSS</li>
-          <li>Radix UI</li>
-          <li>Contentlayer + MDX</li>
-          <li>etc</li>
+          {techStackList.map((tech) => (
+            <li key={tech}>
+              <p>{tech}</p>
+            </li>
+          ))}
         </ul>
       </motion.section>
 
@@ -52,13 +51,18 @@ const AboutSite = () => (
         animate='show'
       >
         <SectionTitle id='reason'>
-          📄 <span className='text-gradient'>Reasons</span> on making
+          ❓ <span className='text-gradient'>Reasons</span> on making
         </SectionTitle>
         <ul className='mt-3 list-disc'>
-          <li>As implementation to learning of Next.js</li>
-          <li>As implementation to learning of Contentlayer and MDX</li>
-          <li>A place to showcase my portfolios</li>
-          <li>Why not? ¯ \_(ツ)_/¯</li>
+          <li>
+            <p>As implementation to learning of Next.js</p>
+          </li>
+          <li>
+            <p>As implementation to learning of Contentlayer and MDX</p>
+          </li>
+          <li>
+            <p>A place to showcase my portfolios</p>
+          </li>
         </ul>
       </motion.section>
 
