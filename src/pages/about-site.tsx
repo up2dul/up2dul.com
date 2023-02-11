@@ -23,9 +23,16 @@ const AboutSite = () => (
       }}
     />
 
-    <motion.h2 variants={slideVariants(0.2)} initial='hidden' animate='show'>
-      🌐 About this <span className='text-gradient'>website</span>
-    </motion.h2>
+    <motion.section
+      variants={slideVariants(0.2)}
+      initial='hidden'
+      animate='show'
+    >
+      <h2>
+        🌐 About this <span className='text-gradient'>website</span>
+      </h2>
+      <p className='mt-3'>Just some additional informations about this site</p>
+    </motion.section>
 
     <div className='mt-10 flex flex-col gap-6 self-start text-left'>
       <motion.section
