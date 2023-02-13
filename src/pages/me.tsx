@@ -98,7 +98,7 @@ const Me = () => (
           2022, I attempted to return to focus on learning programming, until I
           resigned in October 2022 to prioritize my learning.
           <br />I am currently focusing on expanding my knowledge and skills in
-          <S> React.js, Next.js, Typescript,</S> and related Frontend
+          <S> React.js, Next.js, TypeScript,</S> and related Frontend
           technologies by learning from official documentation, articles, videos
           on YouTube, and online courses as well. I also practice by creating on
           various{' '}
