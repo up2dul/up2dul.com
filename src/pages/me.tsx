@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 
 import { slideVariants } from '@/lib/motion';
 import SectionTitle from '@/components/SectionTitle';
+import { cn } from '@/lib/utils';
 
 const S = ({ children }: { children: string }) => <strong>{children}</strong>;
 
@@ -41,14 +42,17 @@ const Me = () => (
       variants={slideVariants(0.4)}
       initial='hidden'
       animate='show'
-      className='mt-10'
+      className={cn(
+        'mt-10 inline-block rounded-full p-1',
+        'bg-gradient-to-br from-blue-500 to-blue-900',
+      )}
     >
       <Image
         src='/static/images/avatar.webp'
         alt='My photo at the beach'
         width={140}
         height={140}
-        className='mx-auto rounded-full'
+        className='rounded-full'
       />
     </motion.figure>
 
