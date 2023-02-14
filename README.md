@@ -1,7 +1,9 @@
 ## TO-DO
 
 ### Improvements
-- [x] @vercel/og
+- [ ] @vercel/og
+  - [ ] posts & projects
+  - [x] other pages
 - [x] @next/font
 - [x] next/image
 - [x] next-seo
@@ -10,11 +12,10 @@
 ### UI
 - [x] Skip to content button
 - [x] Layout
-  - [ ] Progress bar
   - [x] Header
   - [x] Footer
 - [x] Home
-- [ ] Blog
+- [ ] Posts
 - [ ] Projects
 - [x] About me
-- [ ] About site
+- [x] About site
