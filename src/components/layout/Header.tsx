@@ -13,7 +13,7 @@ const Header = () => (
     )}
   >
     <h4 className='font-bold drop-shadow-md'>
-      <Link href='/'>up2dul.com</Link>
+      <Link href='/'>✨ up2dul.com</Link>
     </h4>
 
     <div className='flex w-full items-center justify-evenly gap-10 text-3xl sm:w-auto'>
