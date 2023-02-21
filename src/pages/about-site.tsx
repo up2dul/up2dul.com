@@ -43,6 +43,9 @@ const AboutSite = () => (
         <SectionTitle id='tech-stack'>
           ⚛️ <span className='text-gradient'>Tech</span> stack
         </SectionTitle>
+
+        <p className='mt-1'>Some technologies that I used to built this site</p>
+
         <ul className='mt-3 list-disc'>
           {techStackList.map((tech) => (
             <li key={tech}>
@@ -60,6 +63,9 @@ const AboutSite = () => (
         <SectionTitle id='reason'>
           ❓ <span className='text-gradient'>Reasons</span> on making
         </SectionTitle>
+
+        <p className='mt-1'>Why I built this site?</p>
+
         <ul className='mt-3 list-disc'>
           <li>
             <p>As implementation to learning of Next.js</p>
@@ -81,6 +87,9 @@ const AboutSite = () => (
         <SectionTitle id='references'>
           🔖 Website <span className='text-gradient'>references</span>
         </SectionTitle>
+
+        <p className='mt-1'>Here is some cool sites that inspired me</p>
+
         <ul className='mt-3 list-disc'>
           {referencesList.map((reference) => (
             <li key={reference}>
