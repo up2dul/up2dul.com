@@ -50,7 +50,7 @@ const Project = ({ project }: { project: Project }) => {
             alt={`${title} screenshot`}
             width={440}
             height={220}
-            className='rounded-lg'
+            className='aspect-video rounded-lg'
           />
         </figure>
 
