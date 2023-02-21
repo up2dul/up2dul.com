@@ -5,6 +5,8 @@ import type { NextPage } from 'next';
 import ContactList from '@/components/ContactList';
 import { slideVariants } from '@/lib/motion';
 
+const S = ({ children }: { children: string }) => <strong>{children}</strong>;
+
 const Home: NextPage = () => (
   <>
     <motion.h1
@@ -20,9 +22,9 @@ const Home: NextPage = () => (
 
     <motion.p variants={slideVariants(0.6)} initial='hidden' whileInView='show'>
       <Balancer>
-        A self-taught developer who is currently focusing and diving into the
-        world of <strong>Frontend</strong> web development with{' '}
-        <strong>React.js, Next.js</strong>, and other related technologies.
+        A self-taught <S>Frontend Developer</S> who is currently focusing and
+        diving into the world of <S>React.js, Next.js</S>, and other related
+        technologies.
       </Balancer>
     </motion.p>
   </>
