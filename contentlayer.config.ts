@@ -2,6 +2,7 @@ import {
   defineDocumentType,
   defineNestedType,
   makeSource,
+  type FieldDefs,
 } from 'contentlayer/source-files';
 import rehypeSlug from 'rehype-slug';
 
@@ -17,30 +18,47 @@ const Link = defineNestedType(() => ({
   },
 }));
 
+const basicFields: FieldDefs = {
+  title: {
+    type: 'string',
+    required: true,
+  },
+  description: {
+    type: 'string',
+    required: true,
+  },
+  createdAt: {
+    type: 'date',
+    required: true,
+  },
+  tags: {
+    type: 'list',
+    of: { type: 'string' },
+  },
+};
+
+export const Post = defineDocumentType(() => ({
+  name: 'Post',
+  filePathPattern: `posts/**/*.mdx`,
+  contentType: 'mdx',
+  fields: { ...basicFields },
+  computedFields: {
+    slug: {
+      type: 'string',
+      resolve: (post) => `${post._raw.flattenedPath}`,
+    },
+  },
+}));
+
 export const Project = defineDocumentType(() => ({
   name: 'Project',
-  filePathPattern: `**/*.mdx`,
+  filePathPattern: `projects/**/*.mdx`,
   contentType: 'mdx',
   fields: {
-    title: {
-      type: 'string',
-      required: true,
-    },
-    description: {
-      type: 'string',
-      required: true,
-    },
-    createdAt: {
-      type: 'date',
-      required: true,
-    },
+    ...basicFields,
     link: {
       type: 'nested',
       of: Link,
-    },
-    tags: {
-      type: 'list',
-      of: { type: 'string' },
     },
   },
   computedFields: {
@@ -55,6 +73,6 @@ export default makeSource({
   mdx: {
     rehypePlugins: [rehypeSlug],
   },
-  contentDirPath: './src/content/projects',
-  documentTypes: [Project],
+  contentDirPath: './src/content',
+  documentTypes: [Post, Project],
 });
