@@ -1,7 +1,8 @@
 import { NextSeo } from 'next-seo';
-import { allProjects, type Project } from 'contentlayer/generated';
-import Balancer from 'react-wrap-balancer';
 import { motion } from 'framer-motion';
+import Balancer from 'react-wrap-balancer';
+
+import { allProjects, type Project } from 'contentlayer/generated';
 
 import { selectField } from '@/lib/utils';
 import { slideVariants } from '@/lib/motion';
