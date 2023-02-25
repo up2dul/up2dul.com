@@ -45,7 +45,7 @@ export const Post = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (post) => `${post._raw.flattenedPath}`,
+      resolve: (post) => post._raw.flattenedPath.replace(/posts\/?/, ''),
     },
   },
 }));
@@ -64,7 +64,8 @@ export const Project = defineDocumentType(() => ({
   computedFields: {
     slug: {
       type: 'string',
-      resolve: (project) => `${project._raw.flattenedPath}`,
+      resolve: (project) =>
+        project._raw.flattenedPath.replace(/projects\/?/, ''),
     },
   },
 }));
