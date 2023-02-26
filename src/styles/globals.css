@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.cursor-newtab {
+  cursor: url('/static/newtab-icon.png') 16 16, alias;
+}
+
 .text-gradient {
   @apply bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent;
 }
