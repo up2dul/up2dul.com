@@ -18,7 +18,7 @@ const ContactList = () => (
           href={url}
           aria-label={title}
           className={cn(
-            'block cursor-alias p-1 transition-colors',
+            'cursor-newtab block p-1 transition-colors',
             'hover:text-blue-700 dark:hover:text-blue-400',
           )}
           target='_blank'

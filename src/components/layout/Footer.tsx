@@ -10,7 +10,7 @@ const Footer = () => (
           href='https://github.com/up2dul/up2dul.com'
           aria-label='Source code'
           target='_blank'
-          className='text-link cursor-alias'
+          className='text-link cursor-newtab'
           rel='noreferrer'
         >
           Github

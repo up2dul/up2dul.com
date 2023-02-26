@@ -97,7 +97,7 @@ const AboutSite = () => (
                 href={`https://${reference}`}
                 aria-label={`Link to ${reference}`}
                 target='_blank'
-                className='text-link cursor-alias'
+                className='text-link cursor-newtab'
                 rel='noreferrer'
               >
                 {reference}
