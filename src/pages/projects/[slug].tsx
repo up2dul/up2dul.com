@@ -65,7 +65,7 @@ const Project = ({ project }: { project: Project }) => {
             href={link?.demo}
             aria-label='Demo'
             target='_blank'
-            className='text-link inline-flex cursor-alias items-center gap-1'
+            className='text-link inline-flex cursor-newtab items-center gap-1'
             rel='noreferrer'
           >
             <Globe className='w-4' /> Demo
@@ -74,7 +74,7 @@ const Project = ({ project }: { project: Project }) => {
             href={link?.repo}
             aria-label='Repository'
             target='_blank'
-            className='text-link inline-flex cursor-alias items-center gap-1'
+            className='text-link inline-flex cursor-newtab items-center gap-1'
             rel='noreferrer'
           >
             <Github className='inline w-4' /> Repository
