@@ -1,4 +1,11 @@
-import { Facebook, FileText, Github, Linkedin, Mail, Send } from 'lucide-react';
+import {
+  Edit3,
+  Facebook,
+  FileText,
+  Github,
+  Linkedin,
+  Mail,
+} from 'lucide-react';
 import type { Contact, NavMenu } from './types';
 
 const navMenuList: NavMenu[] = [
@@ -41,14 +48,14 @@ const contactList: Contact[] = [
     icon: Linkedin,
   },
   {
-    title: 'Telegram',
-    url: 'https://t.me/up2dul',
-    icon: Send,
-  },
-  {
     title: 'Facebook',
     url: 'https://facebook.com/up2dul',
     icon: Facebook,
+  },
+  {
+    title: 'Blog',
+    url: 'https://blog.up2dul.com',
+    icon: Edit3,
   },
   {
     title: 'Resume',
