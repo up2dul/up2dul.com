@@ -2,17 +2,9 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 import Balancer from 'react-wrap-balancer';
 
-import { allPosts, type Post } from 'contentlayer/generated';
-
-import Card from '@/components/Card';
 import { slideVariants } from '@/lib/motion';
-import { selectField } from '@/lib/utils';
 
-const Posts = ({
-  posts,
-}: {
-  posts: Pick<Post, 'slug' | 'title' | 'description' | 'tags'>[];
-}) => (
+const Posts = () => (
   <>
     <NextSeo
       title='Posts'
@@ -39,7 +31,7 @@ const Posts = ({
     >
       <h2>✍️ Posts</h2>
       <p className='mt-3'>
-        <Balancer>My thoughts, notes, blog, or any things.</Balancer>
+        <Balancer>My personal thoughts, notes, blog, or any things.</Balancer>
       </p>
     </motion.section>
 
@@ -47,34 +39,24 @@ const Posts = ({
       variants={slideVariants(0.4)}
       initial='hidden'
       animate='show'
-      className='mt-10 grid w-full grid-cols-1 gap-12 lg:grid-cols-2'
+      className='mt-10'
     >
-      {posts.map((post, idx) => (
-        <Card
-          {...post}
-          key={post.slug}
-          href={`/posts/${post.slug}`}
-          order={`0${++idx}`}
-        />
-      ))}
+      <p>
+        <Balancer>
+          Hi there! I am not using this page anymore for my blog posts, I have
+          moved to:{' '}
+          <a
+            href='https://blog.up2dul.com'
+            target='_blank'
+            rel='noreferrer'
+            className='text-link cursor-newtab'
+          >
+            My new blog
+          </a>
+        </Balancer>
+      </p>
     </motion.section>
   </>
 );
-
-export function getStaticProps() {
-  const posts = allPosts
-    .map((post) =>
-      selectField(post, ['slug', 'title', 'description', 'tags', 'createdAt']),
-    )
-    .sort(
-      (a, b) => Number(new Date(b.createdAt)) - Number(new Date(a.createdAt)),
-    );
-
-  return {
-    props: {
-      posts,
-    },
-  };
-}
 
 export default Posts;
