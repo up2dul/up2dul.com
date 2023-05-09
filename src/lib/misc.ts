@@ -59,7 +59,7 @@ const contactList: Contact[] = [
   },
   {
     title: 'Resume',
-    url: 'https://tinyurl.com/up2dul-resume',
+    url: 'https://dub.sh/up2dul-resume',
     icon: FileText,
   },
 ];
