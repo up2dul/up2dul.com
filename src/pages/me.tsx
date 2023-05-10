@@ -134,15 +134,31 @@ const Me = () => (
         animate='show'
       >
         <SectionTitle id='fun-fact'>
-          💡 Fun <span className='text-gradient'>fact</span>
+          💡 Fun <span className='text-gradient'>facts</span>
         </SectionTitle>
-        <p className='mt-3'>
-          Apart from programming, one of the things I enjoy is reading books
-          (even though I may not be as consistent with it currently). My reading
-          preference mostly are novels, specifically those written by Tere Liye.
-          These books by Tere Liye are truly fantastic and always leave me
-          wanting to purchase more of his books.
-        </p>
+        <ul className='mt-3 list-disc'>
+          <li>
+            <p>
+              Apart from programming, one of the things I enjoy is reading books
+              (even though I may be inconsistent with it currently).
+            </p>
+          </li>
+          <li>
+            <p>
+              I just started writing blog. Check this out{' '}
+              <a
+                href='https://blog.up2dul.com'
+                aria-label='Blog'
+                target='_blank'
+                className='text-link cursor-newtab'
+                rel='noreferrer'
+              >
+                here
+              </a>
+              .
+            </p>
+          </li>
+        </ul>
       </motion.section>
     </div>
   </>
