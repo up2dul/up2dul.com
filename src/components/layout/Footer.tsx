@@ -18,7 +18,7 @@ const Footer = () => (
       </p>
     </div>
 
-    <p>⚠️ This site is still under development</p>
+    <p className='opacity-80'>© Abdul Malik 2023</p>
   </footer>
 );
 
