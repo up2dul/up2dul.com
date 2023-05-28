@@ -4,14 +4,4 @@
 echo '🏗️👷 Styling, testing and building your project before commiting'
 echo 'Please wait, this may take a while...'
 
-# Check ESLint Standards
-pnpm lint ||
-(
-  echo '💀 Oops.. You have a problem with the code 💀'
-  echo 'Fix it first, and then re-commit'
-  false;
-)
-
-echo '✅ No error found: committing this now.... 🚀🚀'
-
 pnpm lint-staged
