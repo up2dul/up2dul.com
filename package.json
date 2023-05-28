@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "author": "Abdul malik <up2dul@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/up2dul/up2dul.com.git"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
