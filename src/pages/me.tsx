@@ -114,25 +114,6 @@ const Me = () => (
         initial='hidden'
         animate='show'
       >
-        <SectionTitle id='open-to-work'>
-          💼 <span className='text-gradient'>Open</span> to work
-        </SectionTitle>
-        <p className='mt-3'>
-          Currently I open to work as a <S>Frontend developer</S>. Feel free to
-          contact me on <S>up2dul@gmail.com</S>, or contact my{' '}
-          <S>social media</S> that listed on{' '}
-          <Link href='/' className='text-link'>
-            Home page
-          </Link>
-          , there is also listed my <S>resume</S>. Thank you :D
-        </p>
-      </motion.section>
-
-      <motion.section
-        variants={slideVariants(1.2)}
-        initial='hidden'
-        animate='show'
-      >
         <SectionTitle id='fun-fact'>
           💡 Fun <span className='text-gradient'>facts</span>
         </SectionTitle>
