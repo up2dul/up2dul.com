@@ -1,19 +1,20 @@
+import type { AppType } from 'next/app';
 import { Analytics } from '@vercel/analytics/react';
 import { ThemeProvider } from 'next-themes';
-import { Provider } from 'react-wrap-balancer';
-import type { AppType } from 'next/app';
+import { Provider as BalancerProvider } from 'react-wrap-balancer';
 
 import Layout from '@/components/layout/Layout';
+
 import '@/styles/globals.css';
 
 const MyApp: AppType = ({ Component, pageProps }) => (
   <ThemeProvider defaultTheme='dark'>
-    <Provider>
+    <BalancerProvider>
       <Layout>
         <Component {...pageProps} />
         <Analytics />
       </Layout>
-    </Provider>
+    </BalancerProvider>
   </ThemeProvider>
 );
 
