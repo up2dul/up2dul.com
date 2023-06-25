@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
-import Balancer from 'react-wrap-balancer';
 import { ArrowLeft } from 'lucide-react';
-
+import { NextSeo } from 'next-seo';
 import { NOT_FOUND_SEO } from 'next-seo.config';
+import Balancer from 'react-wrap-balancer';
 
 const NotFound = () => (
   <>

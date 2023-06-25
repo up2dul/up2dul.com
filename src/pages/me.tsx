@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 
 import { slideVariants } from '@/lib/motion';
-import SectionTitle from '@/components/SectionTitle';
 import { cn } from '@/lib/utils';
+import SectionTitle from '@/components/SectionTitle';
 
 const S = ({ children }: { children: string }) => <strong>{children}</strong>;
 

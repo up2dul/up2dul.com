@@ -1,12 +1,11 @@
-import { NextSeo } from 'next-seo';
 import type { PropsWithChildren as LayoutProps } from 'react';
-
+import { NextSeo } from 'next-seo';
 import { SEO } from 'next-seo.config';
 
 import satoshi from '@/lib/satoshi';
 import SkipToContent from '@/components/button/SkipToContent';
-import Header from './Header';
 import Footer from './Footer';
+import Header from './Header';
 
 const Layout = ({ children }: LayoutProps) => (
   <>

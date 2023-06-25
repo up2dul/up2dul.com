@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable import/no-anonymous-default-export */
-import { ImageResponse } from '@vercel/og';
 import type { NextRequest } from 'next/server';
+import { ImageResponse } from '@vercel/og';
 
 export const config = {
   runtime: 'edge',

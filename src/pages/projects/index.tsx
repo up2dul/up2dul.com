@@ -1,11 +1,10 @@
-import { NextSeo } from 'next-seo';
+import { allProjects, type Project } from 'contentlayer/generated';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 
-import { allProjects, type Project } from 'contentlayer/generated';
-
-import { selectField } from '@/lib/utils';
 import { slideVariants } from '@/lib/motion';
+import { selectField } from '@/lib/utils';
 import Card from '@/components/Card';
 
 const Projects = ({
