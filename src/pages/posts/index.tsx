@@ -1,5 +1,5 @@
-import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 import Balancer from 'react-wrap-balancer';
 
 import { slideVariants } from '@/lib/motion';

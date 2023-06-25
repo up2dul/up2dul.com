@@ -4,9 +4,9 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { motion } from 'framer-motion';
 import { Equal } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
 import { navMenuList } from '@/lib/misc';
 import { navMenuVariants } from '@/lib/motion';
+import { cn } from '@/lib/utils';
 import NavLink from './NavLink';
 
 const NavMenu = () => {

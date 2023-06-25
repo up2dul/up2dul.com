@@ -1,9 +1,9 @@
-import Balancer from 'react-wrap-balancer';
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
+import { motion } from 'framer-motion';
+import Balancer from 'react-wrap-balancer';
 
-import ContactList from '@/components/ContactList';
 import { slideVariants } from '@/lib/motion';
+import ContactList from '@/components/ContactList';
 
 const S = ({ children }: { children: string }) => <strong>{children}</strong>;
 

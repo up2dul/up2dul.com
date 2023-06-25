@@ -1,10 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
-import { NextSeo } from 'next-seo';
-import { useMDXComponent } from 'next-contentlayer/hooks';
+import Link from 'next/link';
 import { allProjects, type Project } from 'contentlayer/generated';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Github, Globe } from 'lucide-react';
+import { useMDXComponent } from 'next-contentlayer/hooks';
+import { NextSeo } from 'next-seo';
 
 import { slideVariants } from '@/lib/motion';
 import MDXComponents from '@/components/MDXComponents';

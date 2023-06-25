@@ -1,6 +1,6 @@
+import type { PropsWithChildren } from 'react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { motion } from 'framer-motion';
-import type { PropsWithChildren } from 'react';
 
 import { tooltipVariants } from '@/lib/motion';
 

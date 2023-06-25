@@ -1,8 +1,8 @@
-import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+import { NextSeo } from 'next-seo';
 
-import { slideVariants } from '@/lib/motion';
 import { referencesList, techStackList } from '@/lib/misc';
+import { slideVariants } from '@/lib/motion';
 import SectionTitle from '@/components/SectionTitle';
 
 const AboutSite = () => (

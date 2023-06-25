@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
-import { cn } from '@/lib/utils';
 import { contactList } from '@/lib/misc';
 import { slideVariants } from '@/lib/motion';
+import { cn } from '@/lib/utils';
 import MyTooltip from './MyTooltip';
 
 const ContactList = () => (

@@ -1,5 +1,5 @@
-import { Hash } from 'lucide-react';
 import type { PropsWithChildren } from 'react';
+import { Hash } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 

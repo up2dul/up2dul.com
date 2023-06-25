@@ -6,6 +6,7 @@ import {
   Linkedin,
   Mail,
 } from 'lucide-react';
+
 import type { Contact, NavMenu } from './types';
 
 const navMenuList: NavMenu[] = [
