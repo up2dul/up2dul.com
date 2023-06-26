@@ -8,7 +8,7 @@
 - [x] @next/font
 - [x] next/image
 - [x] next-seo
-- [ ] next-sitemap
+- [x] next-sitemap
 
 ### UI
 
