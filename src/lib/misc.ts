@@ -45,7 +45,7 @@ const contactList: Contact[] = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://linkedin.com/in/abdulmalikk',
+    url: 'https://linkedin.com/in/up2dul',
     icon: Linkedin,
   },
   {
@@ -60,7 +60,7 @@ const contactList: Contact[] = [
   },
   {
     title: 'Resume',
-    url: 'https://dub.sh/up2dul-resume',
+    url: 'https://read.cv/up2dul',
     icon: FileText,
   },
 ];
