@@ -8,6 +8,10 @@
       "parserOptions": {
         "project": "tsconfig.json"
       }
+    },
+    {
+      "extends": ["plugin:mdx/recommended"],
+      "files": ["*.mdx"]
     }
   ],
   "parser": "@typescript-eslint/parser",
