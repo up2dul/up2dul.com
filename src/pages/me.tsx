@@ -128,7 +128,7 @@ const Me = () => (
             <p>
               I just started writing blog. Check this out{' '}
               <a
-                href='https://blog.up2dul.com'
+                href='https://dub.sh/blog-abdul'
                 aria-label='Blog'
                 target='_blank'
                 className='text-link cursor-newtab'

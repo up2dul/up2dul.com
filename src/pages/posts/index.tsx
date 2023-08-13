@@ -46,7 +46,7 @@ const Posts = () => (
           Hi there! I am not using this page anymore for my blog posts, I have
           moved to:{' '}
           <a
-            href='https://blog.up2dul.com'
+            href='https://dub.sh/blog-abdul'
             target='_blank'
             rel='noreferrer'
             className='text-link cursor-newtab'
