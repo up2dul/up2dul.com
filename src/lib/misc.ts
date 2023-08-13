@@ -55,12 +55,12 @@ const contactList: Contact[] = [
   },
   {
     title: 'Blog',
-    url: 'https://blog.up2dul.com',
+    url: 'https://dub.sh/blog-abdul',
     icon: Edit3,
   },
   {
     title: 'Resume',
-    url: 'https://read.cv/up2dul',
+    url: 'https://dub.sh/cv-abdul',
     icon: FileText,
   },
 ];
